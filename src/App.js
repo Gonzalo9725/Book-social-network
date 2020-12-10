@@ -8,7 +8,6 @@ import { auth } from './firebase'
 
 function App() {
   const [firebaseUser, setFirebaseUser] = useState(false)
-  console.log(firebaseUser)
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
