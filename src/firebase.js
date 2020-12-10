@@ -3,13 +3,13 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDA9oACrLKlxxXEicm408VmreKrXWSb4jQ',
-  authDomain: 'social-network-7ca44.firebaseapp.com',
-  databaseURL: 'https://social-network-7ca44.firebaseio.com',
-  projectId: 'social-network-7ca44',
-  storageBucket: 'social-network-7ca44.appspot.com',
-  messagingSenderId: '172591255057',
-  appId: '1:172591255057:web:52db7141b94226ccea6bb0',
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  databaseURL: process.env.DATABASE_URL,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
 }
 
 app.initializeApp(firebaseConfig)
