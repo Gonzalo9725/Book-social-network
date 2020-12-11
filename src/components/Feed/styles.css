@@ -1,0 +1,23 @@
+.bsn-container {
+  background-color: #ebecf1;
+  height: 100vh;
+}
+
+.bsn-advertising {
+  background-color: #206a5d;
+}
+
+.bsn-recommendations {
+  background-color: #ebecf1;
+}
+
+.anime-girl {
+  width: 80%;
+  height: 50%;
+  margin-top: 20px;
+}
+
+.anime-logo {
+  width: 80%;
+  height: 15%;
+}

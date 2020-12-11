@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Login from './components/Login'
-import Home from './components/Home'
-import Reset from './components/Reset'
+import Navbar from './components/Navbar/Navbar'
+import Login from './components/Login/Login'
+import Home from './components/Home/Home'
+import Feed from './components/Feed/Feed'
 import { auth } from './firebase'
 
 function App() {
@@ -20,20 +20,18 @@ function App() {
 
   return firebaseUser !== false ? (
     <Router>
-      <div className='container-fluid'>
-        <Navbar firebaseUser={firebaseUser} />
-        <Switch>
-          <Route path='/' exact>
-            <Home />
-          </Route>
-          <Route path='/login'>
-            <Login />
-          </Route>
-          <Route path='/reset'>
-            <Reset />
-          </Route>
-        </Switch>
-      </div>
+      <Navbar firebaseUser={firebaseUser} />
+      <Switch>
+        <Route path='/' exact>
+          <Home />
+        </Route>
+        <Route path='/login'>
+          <Login />
+        </Route>
+        <Route path='/home'>
+          <Feed />
+        </Route>
+      </Switch>
     </Router>
   ) : (
     <div className='d-flex justify-content-center'>Loading...</div>
