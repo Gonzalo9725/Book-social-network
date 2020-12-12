@@ -3,8 +3,13 @@
 }
 
 .bsn-logo {
-  font-size: 30px;
+  font-size: 35px;
   color: white;
+  text-decoration: none !important;
+}
+
+.bsn-logo:hover {
+  color: #206a5d;
 }
 
 .bsn-profile-photo {

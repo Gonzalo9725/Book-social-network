@@ -23,7 +23,7 @@ const Navbar = (props) => {
 
   return (
     <div className='navbar bsn-navbarcolor'>
-      <Link to='/home' className='bsn-logo'>
+      <Link to={`${firebaseUser ? '/home' : '/'}`} className='bsn-logo'>
         Book
       </Link>
       <div>
